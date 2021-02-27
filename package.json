@@ -1,0 +1,44 @@
+{
+  "name": "noname",
+  "private": "true",
+  "version": "0.1.0",
+  "description": "Restify API template",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "ts-node src/index.ts",
+    "dev:watch": "ts-node-dev src/index.ts",
+    "tsc": "tsc",
+    "clean": "rimraf dist/*",
+    "build": "npm-run-all clean tsc",
+    "check-types": "tsc --noEmit",
+    "eslint": "eslint src/**/*.ts",
+    "eslint:fix": "eslint src/**/*.ts --fix",
+    "format": "prettier --write 'src/**/*.{js,ts,json}'",
+    "lint": "npm-run-all eslint check-types",
+    "lint:fix": "npm-run-all eslint:fix check-types format",
+    "start": "node ."
+  },
+  "author": "Daigo Shitara<stain.witness@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "restify": "^8.5.1"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.30",
+    "@types/restify": "^8.5.0",
+    "@typescript-eslint/eslint-plugin": "^4.15.1",
+    "@typescript-eslint/parser": "^4.15.1",
+    "eslint": "^7.20.0",
+    "eslint-config-prettier": "7.2.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "2.2.1",
+    "rimraf": "^3.0.2",
+    "ts-node": "^9.1.1",
+    "ts-node-dev": "^1.1.1",
+    "typescript": "^4.1.5"
+  },
+  "engines": {
+    "node": "14.15.5",
+    "npm": "6.14.8"
+  }
+}

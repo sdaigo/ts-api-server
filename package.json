@@ -5,8 +5,7 @@
   "description": "Restify API template",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "ts-node src/index.ts",
-    "dev:watch": "ts-node-dev src/index.ts",
+    "dev": "ts-node-dev src/index.ts",
     "tsc": "tsc",
     "clean": "rimraf dist/*",
     "build": "npm-run-all clean tsc",
